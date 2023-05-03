@@ -4,7 +4,7 @@ from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.uix.label import Label
 from kivy.uix.popup import Popup
 from kivy.properties import ObjectProperty
-from database import DataBase as db
+from kivyapp.database import DataBase as db
 
 class CreateAccountWindow(Screen):
     namee = ObjectProperty(None)
@@ -65,7 +65,7 @@ class MainWindow(Screen):
         sm.current = "login"
 
     def on_enter(self):
-        password, name, created = db.get_user(self.current)
+        password, name, created = db.getUser(self.current)
         self.n.text = "Account Name: " + name
         self.email.text = "Email: " + self.current
         self.created.text = "Created On: " + created

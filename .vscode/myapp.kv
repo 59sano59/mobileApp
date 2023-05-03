@@ -12,10 +12,6 @@
             size: root.width, root.height/2
 
             Label:
-                text: "Poliisikouluvalmennus"
-                font_size: 35
-
-            Label:
                 text: "Create an Account"
                 size_hint: 0.8, 0.2
                 pos_hint: {"x":0.1, "top":1}
@@ -79,7 +75,6 @@
                 root.manager.transition.direction = "left"
                 root.submit()
 
-
 <LoginWindow>:
     name: "login"
 
@@ -136,7 +131,6 @@
             on_release:
                 root.manager.transition.direction = "right"
                 root.createButton()
-
 
 <MainWindow>:
     n: n
